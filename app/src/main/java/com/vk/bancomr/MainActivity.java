@@ -35,5 +35,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(navegarTelaSaldo);
             }
         });
+        binding.imgFatura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaFatura = new Intent(MainActivity.this,Fatura.class);
+                startActivity(navegarTelaFatura);
+            }
+        });
+
+        binding.imgTransferencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaFatura = new Intent(MainActivity.this,Transferencia.class);
+                startActivity(navegarTelaFatura);
+            }
+        });
+        binding.imgPoupanca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaFatura = new Intent(MainActivity.this,Poupanca.class);
+                startActivity(navegarTelaFatura);
+            }
+        });
     }
 }

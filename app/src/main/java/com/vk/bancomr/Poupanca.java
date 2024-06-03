@@ -10,17 +10,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.vinaygaba.creditcardview.CardType;
-import com.vinaygaba.creditcardview.CreditCardView;
-import com.vk.bancomr.databinding.ActivityFaturaBinding;
+import com.vk.bancomr.databinding.ActivityPoupancaBinding;
+import com.vk.bancomr.databinding.ActivityTransferenciaBinding;
 
-public class Fatura extends AppCompatActivity {
-    private ActivityFaturaBinding binding;
+public class Poupanca extends AppCompatActivity {
+
+    private ActivityPoupancaBinding  binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        binding =ActivityFaturaBinding.inflate(getLayoutInflater());
+        binding = ActivityPoupancaBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(binding.getRoot());
@@ -31,18 +30,12 @@ public class Fatura extends AppCompatActivity {
         });
         getSupportActionBar().hide();
 
-        binding.toolbarFatura.setNavigationOnClickListener(new View.OnClickListener() {
+        binding.toolbarPoupanca.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent navegarTelaPrincipal = new Intent(Fatura.this,MainActivity.class);
+                Intent navegarTelaPrincipal = new Intent(Poupanca.this,MainActivity.class);
                 startActivity(navegarTelaPrincipal);
             }
         });
-
-        CreditCardView cartaoDeCredito = binding.CardCredit;
-        cartaoDeCredito.setCardNumber("4235 6477 2802 5682");
-        cartaoDeCredito.setCardName("Pablo G Carvalho");
-        cartaoDeCredito.setExpiryDate("11/30");
-        cartaoDeCredito.setType(CardType.MASTERCARD);
     }
 }
